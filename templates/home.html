@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+        
+        <link rel="stylesheet" href="/static/style.css">
+
+        <title>OnlyCoolers</title>
+
+
+    </head>
+
+    <body>
+        
+        <nav>
+            
+            <div class="title">
+
+                <h1>OnlyCoolers</h1>
+                <p>Home</p>
+
+            </div>
+
+
+            <div class="links">
+
+
+                <a href="/" class="link">
+                    <span class="material-symbols-outlined">
+                        home
+                    </span>
+                </a>
+
+                <a href="/profile"" class="link">
+                    <span class="material-symbols-outlined">
+                        account_circle
+                    </span>
+                </a>
+
+                <a href="/logout" class="link">
+                    <span class="material-symbols-outlined">
+                        logout
+                    </span>
+                </a>
+
+            </div>
+
+        </nav>
+        
+        
+        <div class="posts">
+
+            <div class="imgs">
+
+                {% for p in posts %}
+    
+                    <div class="post">
+
+                        <div class="user">
+                            <div class="pfp">
+                                <img src="{{p[3]}}" alt="{{p[0]}} PFP">
+                            </div>
+                            
+                            <h2>{{ p[0] }}</h2>
+
+                        </div>
+    
+                        <div class="img">
+                            <img src="{{ p[1] }}" alt="{{ p[2] }}">
+                        </div>
+                        
+                        <p>{{ p[2] }}</p>
+    
+                    </div>
+    
+                {% endfor %}
+    
+            </div>
+    
+
+        </div>
+
+        
+
+    </body>
+
+</html>
